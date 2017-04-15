@@ -24,15 +24,15 @@
     <script src="jquery-ui.js"></script>
     <script>
       $(document).ready(function(){
-        $(".sub").draggable();
+        $("#sub1").draggable({axis:"x"});
       });
     </script>
   </head>
   <body>
     <div id="main">
-      <div class="sub" style="background: red;"></div>
-      <div class="sub" style="background: blue;"></div>
-      <div class="sub" style="background: green;"></div>
+      <div class="sub" id="sub1" style="background: red;"></div>
+      <div class="sub" id="sub2" style="background: blue;"></div>
+      <div class="sub" id="sub3" style="background: green;"></div>
     </div>
   </body>
 </html>
