@@ -22,8 +22,8 @@
     <script src="jquery-ui.js"></script>
     <script>
       $(document).ready(function(){
-        $("#sub1").draggable();
-        $("#sub2").draggable();
+        $("#sub1").draggable({grid:[50,100]});
+        $("#sub2").draggable({grid:[0,400]});
       });
     </script>
   </head>
