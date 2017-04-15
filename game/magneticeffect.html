@@ -28,7 +28,7 @@
     <script src="jquery-ui.js"></script>
     <script>
       $(document).ready(function(){
-        $("#sub1").draggable({snap: true});
+        $("#sub1").draggable({snap: true, snapTolerance: 100});
         $("#sub2, #sub3, #main2").draggable({snap: true});
 
       });
