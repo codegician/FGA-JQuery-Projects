@@ -22,9 +22,11 @@
     <script src="jquery-ui.js"></script>
     <script>
       $(document).ready(function(){
-        $("#sub1").draggable({helper:"clone", opacity: .5});
+        $("#sub1").draggable({helper:"clone", opacity: .2});
         $("#sub2").draggable();
-        $("#sub3").draggable();
+        $("#sub3").draggable({helper: function(){
+          return $("<div style='border: 2px solid gold; background: pink; color:white'>DNAYY</div>;")
+        }});
       });
     </script>
   </head>
