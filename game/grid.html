@@ -22,8 +22,12 @@
     <script src="jquery-ui.js"></script>
     <script>
       $(document).ready(function(){
-        $("#sub1").draggable({grid:[50,100]});
-        $("#sub2").draggable({grid:[0,400]});
+        $("#sub1").draggable({grid:[50,100], revert: function(){
+          $("#sub1").css("background", "purple")
+          return true;
+          }
+        });
+        $("#sub2").draggable({grid:[50,100], revert:true, revertDuration: 5000});
       });
     </script>
   </head>
