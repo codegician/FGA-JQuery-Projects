@@ -22,16 +22,16 @@
     <script src="jquery-ui.js"></script>
     <script>
       $(document).ready(function(){
-        $("#sub1").draggable({cursor:"pointer", cursorAt:{left: 5,top: 5}});
-        $("#sub2").draggable({cursor:"move", cursorAt:{bottom: 5}});
-        $("#sub3").draggable({cursor:"crosshair", cursorAt:{right: 5,bottom: 5}});
+        $("#sub1").draggable({handle:"p"});
+        $("#sub2").draggable({cancel:"p"});
+        $("#sub3").draggable();
       });
     </script>
   </head>
   <body>
     <div id="main">
-      <div class="sub" id="sub1" style="background: red;"></div>
-      <div class="sub" id="sub2" style="background: blue;"></div>
+      <div class="sub" id="sub1" style="background: red;"><p>click here to move me</p></div>
+      <div class="sub" id="sub2" style="background: blue;"><p>not draggable if you click me</p></div>
       <div class="sub" id="sub3" style="background: green;"></div>
       <p>This is a message</p>
       <p>this is another message</p>
