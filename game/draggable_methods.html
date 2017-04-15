@@ -43,7 +43,7 @@
           alert($("#sub3").draggable("option", "revert"));
         });
         $("#btnSet").click(function(){
-          $("#sub1").draggable("option", "cursor", "pointer");
+          $("#sub1").draggable("option", {"cursor": "pointer" , "revert": true});
         });
         $("#btnOptions").click(function(){
           var obj = $("#sub1").draggable("option");
