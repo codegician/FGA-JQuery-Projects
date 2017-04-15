@@ -47,9 +47,8 @@
         });
         $("#btnOptions").click(function(){
           var obj = $("#sub3").draggable("option");
-        
-          $.each(obj, function(key, value){
-            alert(key +"="+ value);
+          alert(obj.revert);
+          alert(obj.revertDuration);
           });
         });
       });
