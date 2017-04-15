@@ -46,10 +46,9 @@
           $("#sub1").draggable("option", "cursor", "pointer");
         });
         $("#btnOptions").click(function(){
-          var obj = $("#sub3").draggable("option");
+          var obj = $("#sub1").draggable("option");
           alert(obj.revert);
           alert(obj.revertDuration);
-          });
         });
       });
     </script>
@@ -64,7 +63,7 @@
       <button id="btnDestroy">Destory</button>
       <button id="btnGet">Get Option</button>
       <button id="btnSet">Set Option</button>
-      <button id="btnOptions">Get All Option</button>
+      <button id="btnOptions">Get All Options</button>
     </div>
   </body>
 </html>
