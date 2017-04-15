@@ -28,9 +28,14 @@
     <script src="jquery-ui.js"></script>
     <script>
       $(document).ready(function(){
-        $("#sub1").draggable({snap: "#main", snapTolerance: 20});
-        $("#sub2, #sub3, #main2").draggable({snap: true, snapMode:"inner"});
-
+        $("#sub1, #sub2").draggable();
+        $("#sub3").draggable({revert: true, revertDuration:1000})
+        $("#btnDisable").click(function(){
+          $("#sub1").draggable("disable");
+        })
+        $("#btnEnable").click(function(){
+          $("#sub1").draggable("enable");
+        })
       });
     </script>
   </head>
@@ -39,8 +44,12 @@
       <div class="sub" id="sub1" style="background: red;"></div>
       <div class="sub" id="sub2" style="background: blue;"></div>
       <div class="sub" id="sub3" style="background: orange;"></div>
-    </div>
-    <div id="main2">
+      <button id="btnDisable">Disable</button>
+      <button id="btnEnable">Enable</button>
+      <button id="btnDestroy">Destory</button>
+      <button id="btnGetOption">Get Option</button>
+      <button id="btnSetOption">Set Option</button>
+      <button id="btnGetAllOption">Get All Option</button>
     </div>
   </body>
 </html>
