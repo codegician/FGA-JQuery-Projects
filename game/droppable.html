@@ -24,11 +24,13 @@
     <script>
       $(document).ready(function(){
           $("#item1, #item3").draggable({scope:"purple"});
-          $("#area2").droppable({scope:"purple", drop:function(){
-          alert('the item is dropped');
           $("#item2, #item4").draggable({scope:"orange"});
-          $("#area2").droppable({scope:"orange", drop:function(){
-          alert('the item is dropped');
+
+          $("#area1").droppable({scope:"orange", drop:function(){
+          alert('An orange item is dropped');
+          $("#area2").droppable({scope:"purple", drop:function(){
+          alert('A purple item is dropped');
+            }});
           }});
       });
     </script>
