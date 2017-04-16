@@ -9,13 +9,11 @@
         height: 100px;
         border: 1px solid black;
         margin: 5px;
-        background-color: purple;
         float: left;
       }
-      #area{
-        width: 500px;
-        height: 500px;
-        border: 1px solid black;
+      .target{
+        width: 350px;
+        height: 350px;
         margin: 5px;
         float: left;
       }
@@ -25,17 +23,23 @@
     <script src="jquery-ui.js"></script>
     <script>
       $(document).ready(function(){
-          $(".item").draggable();
-          $("#area").droppable({accept:"#item2", drop:function(){
-            alert('the item is dropped');
+          $("#item1, #item3").draggable({scope:"purple"});
+          $("#area2").droppable({scope:"purple", drop:function(){
+          alert('the item is dropped');
+          $("#item2, #item4").draggable({scope:"orange"});
+          $("#area2").droppable({scope:"orange", drop:function(){
+          alert('the item is dropped');
           }});
       });
     </script>
   </head>
   <body>
-      <div id="item1" class="item" style=""></div>
-      <div id="item2" class="item" style="background-color:red;"></div>
-      <div id="item3" class="item" style="background-color:orange;"></div>
-      <div id="area"></div>
+      <div id="item1" class="item" style="        background-color: purple;"></div>
+      <div id="item2" class="item" style="background-color:orange;"></div>
+      <div id="item3" class="item" style="background-color:purple;"></div>
+      <div id="item4" class="item" style="background-color:orange;"></div>
+
+      <div id="area1" class="target" style="border: 5px solid orange";></div>
+      <div id="area2" class="target" style="border: 5px solid purple";></div>
   </body>
 </html>
