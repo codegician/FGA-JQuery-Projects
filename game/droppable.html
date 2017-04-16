@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Interaction: Draggable Restrict</title>
     <style>
-      #item{
+      .item{
         width: 100px;
         height: 100px;
         border: 1px solid black;
@@ -25,15 +25,17 @@
     <script src="jquery-ui.js"></script>
     <script>
       $(document).ready(function(){
-          $(item).draggable();
-          $(area).droppable({drop:function(){
+          $(".item").draggable();
+          $("#area").droppable({accept:"#item2", drop:function(){
             alert('the item is dropped');
           }});
       });
     </script>
   </head>
   <body>
-      <div id="item" style=""></div>
+      <div id="item1" class="item" style=""></div>
+      <div id="item2" class="item" style="background-color:red;"></div>
+      <div id="item3" class="item" style="background-color:orange;"></div>
       <div id="area"></div>
   </body>
 </html>
