@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Interaction: Draggable Restrict</title>
+    <style>
+      #item{
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        margin: 5px;
+        background-color: purple;
+        float: left;
+      }
+      #area{
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        margin: 5px;
+        float: left;
+      }
+    </style>
+    <link rel="stylesheet" href="jquery-ui.css" />
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+      $(document).ready(function(){
+          $(item).draggable();
+          $(area).droppable({drop:function(){
+            alert('the item is dropped');
+          }});
+      });
+    </script>
+  </head>
+  <body>
+      <div id="item" style=""></div>
+      <div id="area"></div>
+  </body>
+</html>
