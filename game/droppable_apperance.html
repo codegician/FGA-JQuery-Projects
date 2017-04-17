@@ -28,6 +28,10 @@
       .startMoving{
         background-color: black;
       }
+
+      .reached{
+        background-color: yellow;
+      }
     </style>
     <link rel="stylesheet" href="jquery-ui.css" />
     <script src="jquery.js"></script>
@@ -36,7 +40,7 @@
       $(document).ready(function(){
           $(".item").draggable();
 
-          $("#area").droppable({activeClass: "startMoving", accept: "#purp", drop:function(){
+          $("#area").droppable({activeClass: "startMoving", hoverClass: "reached", accept: "#purp", drop:function(){
           alert("A purple item is dropped in ");}
         });
       });
