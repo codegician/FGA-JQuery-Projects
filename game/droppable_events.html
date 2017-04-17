@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Interaction: Draggable Events</title>
+    <style>
+      #grey {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        margin: 5px;
+        float: left;
+      }
+      #target{
+        width: 500px;
+        height: 500px;
+        margin: 5px auto;
+        border: 5px solid red;
+      }
+
+    </style>
+    <link rel="stylesheet" href="jquery-ui.css" />
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#grey").draggable();
+            $("#target").droppable({
+              create:function(){
+                $("#status").html("A droppable is created");
+              },
+              drop: function(){
+                $("#status").html("The item is dropped!!!");
+              },
+              over: function(){
+                $("#status").html("The draggable is dragging over the droppable");
+              },
+              out: function(){
+                $("#status").html("The draggable is dragged out of the droppable");
+              },
+              activate: function(){
+                $("#status").html("the draggable is moving");
+              },
+              deactivate: function(){
+                alert("the draggable is not moving");
+              }
+            });
+      });
+    </script>
+  </head>
+  <body>
+      <div id="grey"></div>
+      <div id="target"></div>
+      <div id="status"></div>
+  </body>
+</html>
