@@ -40,8 +40,8 @@
       $(document).ready(function(){
           $(".item").draggable();
 
-          $("#area").droppable({activeClass: "startMoving", hoverClass: "reached", accept: "#purp", drop:function(){
-          alert("A purple item is dropped in ");}
+          $("#area").droppable({activeClass: "startMoving",tolerance: "touch", hoverClass: "reached", drop:function(){
+          $(this).css("background", "blue" );}
         });
       });
     </script>
