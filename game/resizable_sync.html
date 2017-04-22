@@ -10,7 +10,6 @@
         background-color: orange;
         margin: 5px;
         float: left;
-        position: absolute;
         left: 200px;
         top: 200px;
       }
@@ -19,9 +18,8 @@
           height: 100px;
           background-color: orange;
           margin: 5px;
-          float: left;
-          position: absolute;
-          left: 200px;
+          float: left;;
+          left: 400px;
           top: 200px;
         }
 
@@ -39,7 +37,7 @@
     <script src="jquery-ui.js"></script>
     <script>
       $(document).ready(function(){
-         $("#grey").resizable({alsoResize: "#grey2"});
+         $("#grey").resizable({handles: "ne, se, nw, sw", alsoResize: "#grey2"});
       });
     </script>
   </head>

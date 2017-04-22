@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Interaction: Resizable</title>
+    <title>Interaction: Cintaunment</title>
     <style>
       #grey {
         width: 100px;
@@ -10,7 +10,6 @@
         background-color: orange;
         margin: 5px;
         float: left;
-        position: absolute;
         left: 200px;
         top: 200px;
       }
@@ -19,9 +18,8 @@
           height: 100px;
           background-color: orange;
           margin: 5px;
-          float: left;
-          position: absolute;
-          left: 200px;
+          float: left;;
+          left: 400px;
           top: 200px;
         }
 
@@ -39,14 +37,15 @@
     <script src="jquery-ui.js"></script>
     <script>
       $(document).ready(function(){
-         $("#grey").resizable({alsoResize: "#grey2"});
+         $("#box1").resizable({minHeight: 20, maxHeight: 300});
       });
+      $("#box2").resizable({});
     </script>
   </head>
   <body>
       <!-- <img src="image/basket.jpeg" width="150px" height="150px"/> -->
-      <div id="grey"></div>
-      <div id="grey2"></div>
+      <div id="box1" style=" background: silver"></div>
+      <div id="box2" style=" background: pink"><p>jhvhjgghkghjkhkljhhjbjjkhkhjkhjhjkhjhhlk  ckjhcjh kjdhc ashkahkhkaf fhisahfadhila asild asidjl asdi asdiladjh asdiahsi ashf ahdfkhalfafh d fhfhf eue fkjfhew fwehfief  ohfwehf  aewifhjsfggasfgfvkaek   w fufushfgfga   ufwfhuhuuedfbfwfhjeif fjrhfu euhf heu ue f s s f eif n gne if dfnd ofsehfwejhjfwjofjoseflurehjgjsd gk  k  erjlsdfg g m</p></div>
 
   </body>
 </html>
