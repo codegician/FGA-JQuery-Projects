@@ -20,22 +20,26 @@
     <script src="jquery-ui.js"></script>
     <script>
       $(document).ready(function(){
-
+        $("#box1").resizable({
+          create:function(){
+            $("#status").text("resizable created")
+          },
+          start:function(){
+            $(this).css("background", "red")
+          },
+          resize:function(){
+            $("#status").text("resizing")
+          },
+          stop:function(){
+            $("#status").text("stopped resizing")
+          },
         });
      });
     </script>
   </head>
   <body>
-         <ul>
-            <li>Mango</li>
-            <li>Strawberry</li>
-            <li>Apple</li>
-            <li>Banana</li>
-            <li>Kiwi</li>
-            <li>Grapes</li>
-            <li>Orange</li>
-            <li>PAPAYA</li>
-         </ul>
+        <div id="box1"></div>
+        <div id="status"></div>
 
   </body>
 </html>
