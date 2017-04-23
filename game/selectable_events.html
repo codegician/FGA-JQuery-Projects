@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Interaction: Resize Events</title>
+    <title>Interaction: Selectable Events</title>
     <style>
     ol {
       list-style-type: none;
@@ -25,15 +25,30 @@
        color: gold;
        border: 1px solid black;
      }
-
+    #hint {
+        display: none;
+        position: absolute;
+        background: blue;
+        border: 5px solid gray;
+        border-radius: 5px;
+        color: white;
+        padding: 10px
+      }
     </style>
     <link rel="stylesheet" href="jquery-ui.css" />
     <script src="jquery.js"></script>
     <script src="jquery-ui.js"></script>
     <script>
       $(document).ready(function(){
-        $("#fruits").selectable({cancel: ".no"});
-        $(".yes").selectable({disable: true});
+        $("#fruits").selectable({
+          start:function(e){
+            $("#hint").css({
+              display: "inline",
+                  top: e.pageY,
+                  left: e.pageX,
+            }).fadeOut(3000);
+          }
+        });
      });
     </script>
   </head>
