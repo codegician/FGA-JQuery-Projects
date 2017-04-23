@@ -47,6 +47,15 @@
                   top: e.pageY,
                   left: e.pageX,
             }).fadeOut(3000);
+          },
+          // selected(event, ui){
+          //   alert($(".ui-selected").text());
+          // },
+          stop:function(){
+            $("items").text("");
+            $(".ui-selected").each(function(key, value){
+              $("#items").append(value.innerHTML + "</br>");
+            });
           }
         });
      });
@@ -64,5 +73,7 @@
             <li class="yes" id="papaya">PAPAYA</li>
          </ol>
          <div id="hint">To select multiple items, click ctrl and select, or Drag the lasso </div>
+         <p><b>Items Selected:</b></p>
+         <div id="items"></div>
   </body>
 </html>
