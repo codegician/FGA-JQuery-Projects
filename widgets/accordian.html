@@ -6,6 +6,7 @@
         <style>
             #details{
               width: 480px;
+              height: 300px;
             }
             p {
               text-align: justify;
@@ -16,12 +17,14 @@
         <script src="jquery-ui.js"></script>
         <script>
             $(document).ready(function(){
-                $("#details").accordion({collapsible: true, active:false, animate:{duration: 4000, easing: "easeOutBounce"}});
+                $("#details").accordion({header: "h2", collapsible: true, active:false, animate:{duration: 4000, easing: "easeOutBounce"}, event:"mouseover click", heightStyle: "content",
+              });
             });
         </script>
         </head>
   <body>
         <div id="details">
+          <h1>Accordion</h1>
             <h2>jQuery</h2>
             <p>jQuery is a popular Javascript library which simplifies Javascript programming</P>
             <h2>jQuery UI</h2>
