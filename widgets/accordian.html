@@ -17,7 +17,21 @@
         <script src="jquery-ui.js"></script>
         <script>
             $(document).ready(function(){
-                $("#details").accordion({header: "h2", collapsible: true, active:false, animate:{duration: 4000, easing: "easeOutBounce"}, event:"mouseover click", heightStyle: "content",
+                $("#details").accordion({header: "h2", collapsible: true, active:false,
+                animate:{duration: 4000, easing: "easeOutBounce"}, event:"mouseover click", heightStyle: "content",
+                icons:{"header":"ui-icon-plusthick", "activeHeader":"ui-icon-minusthick"},
+                beforeActivate:function(event, ui){
+                if($(ui.newHeader).attr("id") == "secret"){
+                  $(this).preventDefault();
+                }
+              },
+                activate:function(event, ui){
+                  alert(
+                "Old Header: " +(ui.oldHeader).text() + "\n" +
+                "Old Panel: " +(ui.oldPanel).text() + "\n" +
+                "New Header: " +(ui.oldHeader).text() + "\n" +
+                "New Panel: " +(ui.oldPanel).text())
+                }
               });
             });
         </script>
@@ -31,6 +45,9 @@
             <p>jQuery User Interface is built on top of jQuery. It is used to build highly interactive web applications</p>
             <h2>jQuery Mobile</h2>
             <p>jQuery Mobile is a HTML5-based user interface system designed to make responsive websites and apps that are accesible on all smartphones, tablet and desktop devices</p>
+            <h2 id="secret">Secret Message</h2>
+            <p>This is some secret</p>
         </div>
+
   </body>
 </html>
