@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Accordion Test</title>
+    <style>
+        #details {
+          width: 300px;
+        }
+        p{
+          text-align: justify;
+        }
+    </style>
+    <link rel="stylesheet" href="jquery-ui.css" />
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+          $(document).ready( function() {
+             $("#details").accordion({heightStyle:"#details",collapsible: true, active: false});
+            $('#btnAdd').click( function() {
+      				var newDiv = "<h2>" + $("#header").val() + "</h2><p>" + $("#content").val() + "</p>";
+      				$("#details").append(newDiv).accordion("refresh");
+      				$("#details").accordion({active:-1});
+      			});
+          });
+    </script>
+  </head>
+  <body>
+    <div id="details">
+        <h2>First</h2>
+        <p> ad quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <h2>Second</h2>
+        <p>llansequatur? Quis autem vel eum iure reprehenderit qui</p>
+        <h2>Third</h2>
+        <p>"ita distinctNam libero tempore, cum soluta nobis est eligendi </p>
+    </div>
+    <br />
+    <br />
+    <label for="header">Header: </label>
+    <input type="text" id="header"/>
+    <br />
+    <br />
+    <label for="content">Content: </label>
+    <textarea id="content"></textarea>
+    <br />
+    <br />
+    <button id="btnAdd">Add Accordion</button>
+  </body>
+</html>
