@@ -16,13 +16,19 @@
     <script src="jquery.js"></script>
     <script src="jquery-ui.js"></script>
     <script>
+    $(document).ready(function(){
+        $("#details").tabs({active:false, collapsible: true,
+              event:"mouseover", heightStyle:"auto"
+            });
+        });
         //option 1
         //  $(document).ready(function(){
         //     $("#details").tabs({hide:"explode", show:"slideDown"});
         // });
-        $(document).ready(function(){
-            $("#details").tabs({active:1, collapsible: true, hide:{duration:2000, easing:"easeInOutBounce", effect:"explode"}, show:{duration:2000, easing:"easeOutBounce", effect:"highlight"}});
-        });
+        //option 2
+        // $(document).ready(function(){
+        //     $("#details").tabs({active:false, collapsible: true, hide:{duration:2000, easing:"easeInOutBounce", effect:"explode"}, show:{duration:2000, easing:"easeOutBounce", effect:"highlight"}});
+        // });
     </script>
   </head>
   <body>
