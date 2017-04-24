@@ -16,8 +16,12 @@
     <script src="jquery.js"></script>
     <script src="jquery-ui.js"></script>
     <script>
+        //option 1
+        //  $(document).ready(function(){
+        //     $("#details").tabs({hide:"explode", show:"slideDown"});
+        // });
         $(document).ready(function(){
-            $("#details").tabs({hide:"explode", show:"slideDown"});
+            $("#details").tabs({active:1, collapsible: true, hide:{duration:2000, easing:"easeInOutBounce", effect:"explode"}, show:{duration:2000, easing:"easeOutBounce", effect:"highlight"}});
         });
     </script>
   </head>
