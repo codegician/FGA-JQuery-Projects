@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="utf-8">
+        <title>Accordion</title>
+        <style>
+            #details{
+              width: 480px;
+            }
+            p {
+              text-align: justify;
+            }
+        </style>
+        <link rel="stylesheet" href="jquery-ui.css" />
+        <script src="jquery.js"></script>
+        <script src="jquery-ui.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#details").accordion({collapsible: true, active:false, animate:{duration: 4000, easing: "easeOutBounce"}});
+            });
+        </script>
+        </head>
+  <body>
+        <div id="details">
+            <h2>jQuery</h2>
+            <p>jQuery is a popular Javascript library which simplifies Javascript programming</P>
+            <h2>jQuery UI</h2>
+            <p>jQuery User Interface is built on top of jQuery. It is used to build highly interactive web applications</p>
+            <h2>jQuery Mobile</h2>
+            <p>jQuery Mobile is a HTML5-based user interface system designed to make responsive websites and apps that are accesible on all smartphones, tablet and desktop devices</p>
+        </div>
+  </body>
+</html>
