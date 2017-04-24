@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Interaction: Aspect Ratio</title>
+    <style>
+      #box1 {
+        width: 200px;
+        height: 100px;
+        margin: 5px;
+        border: 1px solid black;
+        background-color: gray;
+      }
+      #box2 {
+          width: 100px;
+          height: 20px;
+          background-color: orange;
+          border: 1px solid black;
+        }
+
+        p {
+          padding: 0;
+          margin: 0;
+        }
+
+    </style>
+    <link rel="stylesheet" href="jquery-ui.css" />
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+      $(document).ready(function(){
+         $("#box1").resizable({aspectRatio: true, stop: function(){
+           alert("Height: " + $(this).css("height") + "\n Width" + $(this).css("width"));
+         }});
+         $("#box2").resizable({aspectRatio: 3, stop: function(){
+           alert("Height: " + $(this).css("height") + "\n Width" + $(this).css("width"));
+         }});
+       });
+    </script>
+  </head>
+  <body>
+         <div id="box1"></div>
+         <div id="box2"><p>test content</p></div>
+  </body>
+</html>

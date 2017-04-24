@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="utf-8">
+        <title>Interaction: Sortable</title>
+             <style>
+             ol {
+               list-style-type: none;
+               width: 170px;
+               height: 480px;
+             }
+               li {
+                 height: 30px;
+                 width: 150px;
+                 margin: 2px;
+                 font-size: 20px;
+                 text-align: center;
+                 border: 1px solid gold;
+               }
+
+               #fruits li{
+                 background-color: pink;
+               }
+               #vegtables li{
+                 background-color: coral;
+               }
+
+               fieldset {
+                 float: left;
+                 border: 3px solid black;
+                 margin: 30px;
+                 height: 500px;
+                 width: 200px;
+               }
+             </style>
+        <link rel="stylesheet" href="jquery-ui.css" />
+        <script src="jquery.js"></script>
+        <script src="jquery-ui.js"></script>
+        <script>
+             $(document).ready(function(){
+               $("#fruits").sortable({cursor: move, connectWith: "#vegtables"});
+                $("#vegtables").sortable({cursor: move; connectWith: "#fruits"});
+
+             });
+        </script>
+  </head>
+      <body>
+        <fieldset id="left">
+          <legend><b>fruits</b></legends>
+             <ol id="fruits">
+                <li class="no" id="mango">Mango</li>
+                <li class="no"id="strawberry">Strawberry</li>
+                <li class="yes" id="apple">Apple</li>
+                <li class="no" id="banana">Banana</li>
+                <li class="yes" id="kiwi">Kiwi</li>
+                <li class="no" id="grapes">Grapes</li>
+                <li class="yes" id="orange">Orange</li>
+                <li class="yes" id="papaya">Papaya</li>
+             </ol>
+        </fieldset>
+        <fieldset id="right">
+          <legend><b>vegtables</b></legends>
+             <ol id="vegetables">
+                <li class="no" id="kale">Kale</li>
+                <li class="no" id="spinach">Spinach</li>
+                <li class="yes" id="broccli">Broccli</li>
+                <li class="no" id="greens">Greens</li>
+                <li class="yes" id="tomato">Tomato</li>
+                <li class="no" id="peas">Peas</li>
+                <li class="yes" id="asparagus">Asparagus</li>
+                <li class="yes" id="zucchini">Zucchini</li>
+             </ol>
+        </fieldset>
+      </body>
+</html>

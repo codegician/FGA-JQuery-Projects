@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Interaction: Resizable</title>
+    <style>
+      #grey {
+        width: 100px;
+        height: 100px;
+        background-color: orange;
+        margin: 5px;
+        float: left;
+        position: absolute;
+        left: 200px;
+        top: 200px;
+      }
+      #grey2 {
+          width: 100px;
+          height: 100px;
+          background-color: orange;
+          margin: 5px;
+          float: left;
+          position: absolute;
+          left: 200px;
+          top: 200px;
+        }
+
+      #target{
+        width: 500px;
+        height: 500px;
+        margin: 5px auto;
+        border: 5px solid red;
+
+      }
+
+    </style>
+    <link rel="stylesheet" href="jquery-ui.css" />
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+      $(document).ready(function(){
+         $("#grey").resizable({alsoResize: "#grey2"});
+      });
+    </script>
+  </head>
+  <body>
+      <!-- <img src="image/basket.jpeg" width="150px" height="150px"/> -->
+      <div id="grey"></div>
+      <div id="grey2"></div>
+
+  </body>
+</html>

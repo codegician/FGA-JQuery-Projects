@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Interaction: Draggable Restrict</title>
+    <style>
+      #item{
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        margin: 5px;
+        background-color: purple;
+      }
+      /*#status{
+        width: 100px;
+        height: 100px;
+      }*/
+    </style>
+    <link rel="stylesheet" href="jquery-ui.css" />
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#btnCreate').click(function(){
+          $("#item").draggable({create:function(){
+            alert('A draggable element is created!!')
+          },
+        start:function(){
+          $('#item').css("background", "green");
+        },
+        drag:function(){
+          $('#status').html('The item is moving');
+        },
+        stop:function(){
+          $('#status').html('The item stopped moving');
+        }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+      <div id="item"></div>
+      <button id="btnCreate">Create</button>
+      <div id="status"></div>
+  </body>
+</html>
