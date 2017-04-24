@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tabs</title>
+    <style>
+    #details{
+      width: 450px;
+      margin: 15px;
+    }
+    p {
+      text-align: justify;
+    }
+    </style>
+    <link rel="stylesheet" href="jquery-ui.css" />
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#details").tabs();
+        });
+    </script>
+  </head>
+  <body>
+  <div id="details">
+    <ul>
+        <li><a href="#jquery">jQuery</a></li>
+        <li><a href="#ui">jQuery UI</a></li>
+        <li><a href="#mobile">jQuery Mobile</a></li>
+    </ul>
+      <p id="jquery">jQuery is a popular Javascript library which simplifies Javascript programming</P>
+      <p id="ui">jQuery User Interface is built on top of jQuery. It is used to build highly interactive web applications</p>
+      <p id="mobile">jQuery Mobile is a HTML5-based user interface system designed to make responsive websites and apps that are accesible on all smartphones, tablet and desktop devices</p>
+    </div>
+
+  </body>
+</html>
