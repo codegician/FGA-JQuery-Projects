@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FAQs</title>
+    <style>
+             body {
+                  color: #3b3b3b;
+                  margin: 50px 150px;
+                  font-family: 'Helvetica', 'Arial', sans-serif;
+              }
+
+              h1 {
+                  font-size: 30px;
+                  font-weight: 200;
+                  margin-bottom: 30px;
+              }
+
+              .faq {
+                  cursor: pointer;
+                  font-size: 17px;
+                  font-weight: 200;
+                  border: 1px solid #f7f7f6;
+              }
+
+              .question {
+                  padding: 15px;
+                  background-color: #f7f7f6;
+              }
+
+              .question:hover {
+                  color: black;
+              }
+
+              .answer {
+                  padding: 25px;
+              }
+
+    </style>
+    <link rel="stylesheet" href="jquery-ui.css">
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#faq").accordion({heightStyle:"#faq",collapsible: true, active: false});
+
+        });
+    </script>
+  </head>
+  <body>
+    <h1>Frequently Asked Questions</h1>
+    <div id="faq">
+        <h1 class="question">1. What is jQuery?</h1>
+        <p class="answer">
+            jQuery is a JavaScript framework, which purpose is to make it much easier to use JavaScript on your website. You could also describe jQuery as an abstraction layer, since it takes a lot of the functionality that you would have to write many lines of JavaScript to accomplish and wraps it into functions that you can call with a single line of code.
+        </p>
+
+        <h1 class="question">2. Do I need to know JavaScript to use jQuery?</h1>
+        <p class="answer">
+            No, you don't need to know JavaScript to use jQuery. In fact, jQuery tries to simplify a lot of the complicated things with JavaScript, like AJAX calls and DOM manipulation, so that you may do these things without knowing JavaScript.
+        </p>
+
+        <h1 class="question">3. Does jQuery replace JavsScript?</h1>
+        <p class="answer">
+            jQuery does NOT replace JavaScript, and while it does offer some syntactical shortcuts, the code you write when you use jQuery is still JavaScript code.
+        </p >
+    </div>
+  </body>
+</html>
