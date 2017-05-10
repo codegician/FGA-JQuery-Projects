@@ -31,7 +31,10 @@
 
                 $(".filter").click(function(){
                     var city = $(this).attr("id");
-                    $(".listings").not("." + city).css("display", "none");
+                    $(".listings").show();
+                    if(city != "all") {
+                      $(".listings").not("." + city).css("display", "none");
+                    }
                 });
             });
         </script>
