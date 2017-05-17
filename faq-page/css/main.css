@@ -1,0 +1,31 @@
+body {
+     color: #3b3b3b;
+     margin: 50px 150px;
+     font-family: 'Helvetica', 'Arial', sans-serif;
+ }
+
+ h1 {
+     font-size: 30px;
+     font-weight: 200;
+     margin-bottom: 30px;
+ }
+
+ .faq {
+     cursor: pointer;
+     font-size: 17px;
+     font-weight: 200;
+     border: 1px solid #f7f7f6;
+ }
+
+ .question {
+     padding: 15px;
+     background-color: #f7f7f6;
+ }
+
+ .question:hover {
+     color: black;
+ }
+
+ .answer {
+     padding: 25px;
+ }

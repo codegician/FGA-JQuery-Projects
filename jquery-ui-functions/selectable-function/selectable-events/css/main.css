@@ -1,0 +1,30 @@
+ol {
+  list-style-type: none;
+}
+  li {
+    height: 30px;
+    width: 150px;
+    background-color: pink;
+    margin: 2px;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid gold;
+  }
+ #fruits .ui-selecting {
+   border: 3px solid purple;
+   color: white;
+ }
+ #fruits .ui-selected {
+   background: maroon ;
+   color: gold;
+   border: 1px solid black;
+ }
+#hint {
+    display: none;
+    position: absolute;
+    background: blue;
+    border: 5px solid gray;
+    border-radius: 5px;
+    color: white;
+    padding: 10px
+  }

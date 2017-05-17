@@ -1,0 +1,19 @@
+.item{
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 5px;
+  float: left;
+}
+.target{
+  width: 350px;
+  height: 350px;
+  margin: 5px;
+  float: left;
+}
+
+#child {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}

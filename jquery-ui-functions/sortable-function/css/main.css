@@ -1,0 +1,30 @@
+ol {
+  list-style-type: none;
+  width: 170px;
+  /*height: 480px;*/
+  margin-bottom: 0px;
+}
+  li {
+    height: 30px;
+    width: 150px;
+    margin: 2px;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid gold;
+  }
+
+  #fruits li{
+    background-color: pink;
+  }
+  #vegtables li{
+    background-color: coral;
+  }
+
+  fieldset {
+    float: left;
+    border: 3px solid black;
+    margin: 30px;
+    /*height: 500px;*/
+    width: 200px;
+    padding: 0;
+  }
