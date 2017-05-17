@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Autocomplete</title>
-    <script src="jquery.js"></script>
-    <script src="jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="js/jquery-ui.css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <script>
     $(document).ready(function(){
       var countries = [
@@ -18,22 +20,23 @@
           "Maui",
           "Egypt"
       ];
-        $("#country").autocomplete({source:countries, autoFocus: true})
+        $("#country").autocomplete({source: countries, autoFocus: true})
 
-          });
+
         // callback function
-        // $("#country").autocomplete({source: function(request, response){
-        //   var filterArray = $.map(countries, function(element){
-        //     if(element.toUpperCase().indexOf(request.term.toUpperCase())==0)
-        //     {
-        //       return element;
-        //     } else {
-        //       return null;
-        //     }
-        //   });
-        //   response(filterArray);
-        // }});
+        $("#country").autocomplete({source: function(request, response){
+          var filterArray = $.map(countries, function(element){
+            if(element.toUpperCase().indexOf(request.term.toUpperCase())==0)
+            {
+              return element;
+            } else {
+              return null;
+            }
+          });
+          response(filterArray);
+        }});
 
+      });
     </script>
   </head>
   <body>

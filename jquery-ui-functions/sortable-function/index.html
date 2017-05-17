@@ -9,8 +9,8 @@
         <script src="js/jquery-ui.js"></script>
         <script>
              $(document).ready(function(){
-               $("#fruits").sortable({cursor: move, connectWith: "#vegtables"});
-                $("#vegtables").sortable({cursor: move; connectWith: "#fruits"});
+               $('#fruits').sortable({connectWith:'#vegetables', axis: "x", tolerence:"pointer", cursor: 'pointer'});
+                $('#vegetables').sortable({connectWith:'#fruits', cursor:'pointer'});
              });
         </script>
   </head>
@@ -29,11 +29,11 @@
              </ol>
         </fieldset>
         <fieldset id="right">
-          <legend><b>vegtables</b></legends>
+          <legend><b>vegetables</b></legends>
              <ol id="vegetables">
                 <li class="no" id="kale">Kale</li>
                 <li class="no" id="spinach">Spinach</li>
-                <li class="yes" id="broccli">Broccli</li>
+                <li class="yes" id="broccoli">Broccli</li>
                 <li class="no" id="greens">Greens</li>
                 <li class="yes" id="tomato">Tomato</li>
                 <li class="no" id="peas">Peas</li>
